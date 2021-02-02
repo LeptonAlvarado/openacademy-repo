@@ -18,6 +18,14 @@
                     <page string="About">
                         This is a example of notebooks
                     </page>
+                    <page string="Courses">
+                        <field name="session_ids" nolabel="1">
+                            <tree string="Registered sessions">
+                                <field name="name"/>
+                                <field name="instructor_id"/>
+                            </tree>
+                        </field>
+                    </page>
                 </notebook>
             </form>
         </field>
@@ -76,6 +84,8 @@
                         <field name="seats"/>
                         <field name="instructor_id"/>
                         <field name="course_id"/>
+                        <label for="attendee_ids"/>
+                        <field name="attendee_ids" nolabel="1"/>
                     </group>
                 </sheet>
             </form>
@@ -102,7 +112,7 @@
     <record model="ir.actions.act_window" id="session_list_action">
       <field name="name">Sessions</field>
       <field name="res_model">openacademy.session</field>
-
+      <field name="type">ir.actions.act_window</field>
       <field name="view_mode">tree,form</field>
     </record>
 
